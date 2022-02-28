@@ -1,0 +1,64 @@
+
+
+//main section card content
+
+//main wrapper
+.content-wrapper {
+  background-color: $bg-color;
+  color: $primary-text-color;
+  padding: $content-wrapper-padding;
+
+
+  }
+  
+
+ 
+
+  //table
+  .product-listing {
+    width: 65%;
+    padding-left: $coloum-padding-side;
+    padding-right: $coloum-padding-side;
+    
+    @include Forsize(XL-L)
+    {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    @include Forsize(L){
+      width: 80%;
+    }
+    
+    @include Forsize(M){
+      width: 100%;
+    }
+    @include Forsize(SM)
+    {
+      width: 100%;
+    }
+   
+  }
+
+  //graph
+  .sells-graph {
+    width: 35%;
+    padding-left: $coloum-padding-side;
+    padding-right: $coloum-padding-side;
+
+    @include Forsize(XL-L)
+    {
+      width: 50%;
+    }
+    @include Forsize(L){
+      width: 50%;
+    }
+    @include Forsize(M){
+      width: 70%;
+    }
+    @include Forsize(SM){
+      width: 100%;
+    }
+  
+  }
+

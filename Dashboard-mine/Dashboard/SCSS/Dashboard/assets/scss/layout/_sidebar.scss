@@ -1,0 +1,80 @@
+//input checkbox
+#menutoggle {
+  display: none;
+  &:checked {
+    ~ #primaryNav {
+      width: 0px;
+    }
+    ~ #toggle {
+      transform: rotate(0deg);
+      left: 0;
+    }
+
+    @include Forsize(SM) {
+      ~ #primaryNav {
+         width: 30%;
+        left: 0;
+      }
+      ~ #toggle {
+        z-index: 100;
+        transform: rotate(180deg);
+        left: 25%;
+      }
+
+      ~ .content-wrapper {
+        filter: blur(8px);
+      }
+    }
+  }
+}
+
+//lable
+#toggle {
+  color: $toggle-color;
+  @include position(absolute, 50%, auto, auto, 80px);
+  font-size: $toggle-size;
+  transform: rotate(180deg);
+  transition: 0.6s all ease;
+
+  @include Forsize(SM) {
+    @include position($top: 50%, $left: 0px);
+    z-index: 80;
+    transform: rotate(0deg);
+  }
+}
+
+#primaryNav {
+  width: $sidebar-width;
+  background-color: $sidebar-bg;
+  position: relative;
+  transition: 0.6s all ease;
+
+  .nav-item {
+    @extend %flex-center;
+    padding: $nav-link-font-size;
+
+    .nav-link {
+      padding: $nav-item-padding;
+      font-size: $nav-link-font-size;
+
+      &:hover {
+        .icon {
+          color: $nav-link-hover-color;
+        }
+      }
+    }
+
+    .icon {
+      color: $nav-link-color;
+    }
+  }
+
+  @include Forsize(SM) {
+    @include position($top: 0px, $left: -140px);
+    height: 100%;
+    width: 30%;
+    z-index: 1;
+    transition: 0.6 all ease;
+    
+  }
+}

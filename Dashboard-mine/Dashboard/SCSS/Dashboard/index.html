@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Practice</title>
+
+
+    <!-- style  -->
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    <!-- icons  -->
+    <link rel="stylesheet" href="assets/icons/style.css">
+
+    <!--font-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- wrapper  start-->
+    <div class="d-flex flex-column h-100">
+        <!-- header start  -->
+        <header class="header d-flex align-item-center flex-shrink-0">
+            <!-- header container starts  -->
+            <div class="header-content d-flex aling-item-center justify-content-between">
+                <!-- logo and search start -->
+                <div class="d-flex align-item-center">
+                    <!-- brang logo  -->
+                    <div class="brandlogo d-flex align-item-center justify-content-center">
+                        <span class="icon icon-dashboard"></span>
+                    </div>
+                    <!-- brang logo ends -->
+                    <!-- search box -->
+                    <div class="searchbox d-flex align-item-center">
+                        <span class="icon-search"></span>
+                        <input type="text" placeholder="Search for transaction, items, etc">
+                        <button class="btn btn-primary" type="submit">Search</button>
+                    </div>
+                    <!-- search box end-->
+                </div>
+                <!-- logo and search end -->
+
+                <!-- header notification start -->
+                <input type="checkbox" name="" id="userDropdown">
+
+                <nav>
+                    <ul class="notify d-flex align-item-center">
+                        <li class="li-header">
+                            <a href="#"><span class="icon icon-message-outlined"></span>
+                                <div class='notification-dot'></div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#"> <span class="icon icon-bell"></span>
+                                <div class='notification-dot'></div>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img class="avatar" src="assets/img/monion-2.jpg" alt="profile img">
+                                </figure>
+                            </a>
+                        </li>
+                        <li><a href="#">
+                                <span class="icon icon-message-outlined"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <label for="userDropdown"> <span class="icon-arrow-down-right2"></span></label>
+                <!-- header notification end-->
+            </div>
+            <!-- header container ends  -->
+        </header>
+        <!-- header ends  -->
+        <!-- secondary wrapper starts-->
+        <main class="d-flex flex-grow-1 overflow-hidden position-relative">
+
+            <!-- sidebar starts  -->
+
+            <input type="checkbox" id="menutoggle">
+            <label id="toggle" for="menutoggle"><span class="icon-circle-right"></span></label>
+
+            <aside id="primaryNav" class="d-flex flex-column h-100">
+                <!-- navigations starts-->
+                <nav class="flex-grow-1 overflow-vertical">
+                    <ul class="navbar-nav mt-2">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="icon icon-dashboard"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="icon icon-cart"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="icon icon-notepad"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="icon icon-settings"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- navigations ends -->
+                <!--Signout nav starts-->
+                <nav class="navLog  mb-3">
+                    <ul class="navbar">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="icon icon-warning"></span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <span class="icon icon-sign-out"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Signout nav ends -->
+            </aside>
+            <!-- sidebar ends  -->
+
+            <!-- main content starts -->
+
+            <div class="content-wrapper overflow-vertical flex-grow-1 ">
+                <h1 id="app-title">Dashboard</h1>
+                <!-- card container  -->
+                <div class="row mt-4">
+                    <!-- row item card start -->
+                    <div class="card-col">
+                        <!-- card  -->
+                        <div class="card card-views">
+                            <!-- card header  -->
+                            <div class="card-header">
+                                <div class="card-logo">
+                                    <span class="icon icon-eye"></span>
+                                </div>
+                                <span class="icon icon-bell color-up"></span>
+                            </div>
+                            <!-- card body  -->
+                            <div class="card-body">
+                                <p class="card-title">Total Views</p>
+                                <p class="card-text">308,402</p>
+                                <p class="card-sub-text">Start from 3 jan 2022</p>
+                            </div>
+                        </div>
+                        <!-- card end  -->
+                    </div>
+                    <!-- row item card end -->
+                    <!-- row item card start -->
+                    <div class="card-col">
+                        <!-- card  -->
+                        <div class="card card-products">
+                            <!-- card header  -->
+                            <div class="card-header">
+                                <div class="card-logo">
+                                    <span class="icon icon-shopping-bag"></span>
+                                </div>
+                                <span class="icon icon-arrow-down-right2 color-down"></span>
+                            </div>
+                            <!-- card body  -->
+                            <div class="card-body">
+                                <p class="card-title">Total Products</p>
+                                <p class="card-text">10,820</p>
+                                <a class="card-link">+ Add New Product</a>
+                            </div>
+                        </div>
+                        <!-- card end  -->
+                    </div>
+                    <!-- row item card end -->
+                    <!-- row item card start -->
+                    <div class="card-col">
+                        <!-- card  -->
+                        <div class="card card-users">
+                            <!-- card header  -->
+                            <div class="card-header">
+                                <div class="card-logo ">
+                                    <span class="icon icon-user-group"></span>
+                                </div>
+                                <span class="icon icon-arrow-up-right2 color-up"></span>
+                            </div>
+                            <!-- card body  -->
+                            <div class="card-body">
+                                <p class="card-title">Total Users</p>
+                                <p class="card-text">8,425</p>
+                                <p class="card-sub-text">New Users noted every week</p>
+                            </div>
+                        </div>
+                        <!-- card end  -->
+                    </div>
+                    <!-- row item card end -->
+                    <!-- row item card start -->
+                    <div class="card-col">
+                        <!-- card  -->
+                        <div class="card card-sells">
+                            <!-- card header  -->
+                            <div class="card-header">
+                                <div class="card-logo ">
+                                    <span class="icon icon-cart "></span>
+                                </div>
+                                <span class="icon icon-arrow-up-right2 color-up"></span>
+                            </div>
+                            <!-- card body  -->
+                            <div class="card-body">
+                                <p class="card-title">Total Sells</p>
+                                <p class="card-text">1,028,623</p>
+                                <p class="card-sub-text">Start from 3 jan 2022</p>
+                            </div>
+                        </div>
+                        <!-- card end  -->
+                    </div>
+                    <!-- row item card end -->
+
+                </div>
+                <!-- card container end  -->
+
+                <!-- product sell container start -->
+                <div class="row mt-4">
+                    <div class="product-listing">
+                        <div class="product-table overflow-hidden">
+                            <div class="h-100 overflow-auto">
+                                <!-- product table start -->
+                                <table class="table fixed-head">
+                                    <thead>
+                                        <th>No</th>
+                                        <th></th>
+                                        <th>Product Name</th>
+                                        <th>Status</th>
+                                        <th>Sold</th>
+                                        <th>View</th>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td>
+                                                <figure>
+                                                    <img class="img productimg" src="assets/img/minion-1.jpg"
+                                                        alt="product Image">
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                New Mobile App Lit
+                                            </td>
+                                            <td>
+                                                <span class="status active">Active</span>
+                                            </td>
+                                            <td>
+                                                10
+                                            </td>
+                                            <td>
+                                                320
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>
+                                                <figure>
+                                                    <img class="img productimg" src="assets/img/monion-2.jpg"
+                                                        alt="product Image">
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                New Watch brand style
+                                            </td>
+                                            <td>
+                                                <span class="status active">Active</span>
+                                            </td>
+                                            <td>
+                                                10
+                                            </td>
+                                            <td>
+                                                320
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td>
+                                                <figure>
+                                                    <img class="img productimg" src="assets/img/minion-3.jpg"
+                                                        alt="product Image">
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                New show design
+                                            </td>
+                                            <td>
+                                                <span class="status active">Active</span>
+                                            </td>
+                                            <td>
+                                                10
+                                            </td>
+                                            <td>
+                                                320
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td>
+                                                <figure>
+                                                    <img class="img productimg" src="assets/img/mini-4.jpg"
+                                                        alt="product Image">
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                New Mobile App Lit2
+                                            </td>
+                                            <td>
+                                                <span class="status active">Active</span>
+                                            </td>
+                                            <td>
+                                                10
+                                            </td>
+                                            <td>
+                                                320
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td>
+                                                <figure>
+                                                    <img class="img productimg" src="assets/img/product2.jpg"
+                                                        alt="product Image">
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                New Watch App
+                                            </td>
+                                            <td>
+                                                <span class="status inactive">In active</span>
+                                            </td>
+                                            <td>
+                                                10
+                                            </td>
+                                            <td>
+                                                320
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td>
+                                                <figure>
+                                                    <img class="img productimg" src="assets/img/product1.jpg"
+                                                        alt="product Image">
+                                                </figure>
+                                            </td>
+                                            <td>
+                                                New Watch App
+                                            </td>
+                                            <td>
+                                                <span class="status active">In active</span>
+                                            </td>
+                                            <td>
+                                                10
+                                            </td>
+                                            <td>
+                                                320
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <!-- product table end -->
+                            </div>
+                        </div>
+                    </div>
+                    <!-- product view and sell  -->
+                    <div class="sells-graph">
+                        <div class="sells-graph-container">
+                            <!-- Title  -->
+                            <div class="d-flex align-item-center justify-content-between">
+                                <span>Views & sells</span>
+                                <span class="text-outline">This Week <span class="icon-circle-down"></span></span>
+                            </div>
+                            <!-- Title  ends-->
+                            <!-- sub heading  -->
+                            <div class="d-flex align-item-center mt-3">
+                                <div>
+                                    <span class="icon-stop2 color-views"></span>
+                                    <span>Total Views</span>
+                                </div>
+                                <div class="ml-3">
+                                    <span class="icon-stop2 color-sells"></span>
+                                    <span>Total Views</span>
+                                </div>
+                            </div>
+                            <!-- sub heading ends -->
+
+
+                        </div>
+                    </div>
+                    <!-- product view and sell  ends-->
+                </div>
+                <!-- product sell container end -->
+            </div>
+            <!-- main content ends -->
+        </main>
+        <!-- secondary wrapper starts-->
+
+    </div>
+    <!-- wrapper  ends-->
+</body>
+
+</html>

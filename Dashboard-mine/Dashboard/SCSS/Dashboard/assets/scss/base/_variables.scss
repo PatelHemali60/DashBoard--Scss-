@@ -1,0 +1,84 @@
+// All the SCSS Variables goes here
+
+// Fonts
+$font-size-base: 1rem;
+// $font-family: 'Josefin Sans', sans-serif;
+$font-family: 'Josefin Sans', sans-serif;
+$font-light: 200;
+$font-regular: 400;
+$font-bold: 500;
+
+$heading-font-weight: $font-bold;
+
+//==============sideBar starts=================
+$sidebar-width: 80px;
+$toggle-size:1.5rem;
+//nav items
+$nav-item-padding:1rem;
+$nav-link-padding:.6rem;
+$nav-link-font-size:1.6rem;
+
+//==============sideBar ends=================
+
+//=========Header start=============
+$header-height: 80px;
+//bard-logo
+$barnd-logo-size: 1.6rem;
+$barnd-logo-width: $sidebar-width;
+
+//searchbox
+$searchbox-ml: 40px;
+$searchbox-height: 45px;
+$searchbox-width: 460px;
+
+//notification
+$header-icon-size: 1.5rem;
+$avatar-height: 40px;
+$notification-dot-width: 10px;
+//=========Header ends=============
+
+//===============content start ======================
+$content-wrapper-padding: 40px;
+
+//coloum in row class
+$coloum-padding-side:0.75rem;
+
+//componets
+
+//===button===
+$btn-padding-x:1rem;
+$btn-padding-y:.3rem;
+$btn-font-size:1.1rem;
+
+
+//====section hrading ====//
+$app-title-font-size : 1.4rem;
+
+
+//=====card====
+$card-padding: 1.5rem;
+$card-logo-height: 60px;
+$card-logo-width: 60px;
+$card-logo-size: 2rem;
+$card-tite:1rem;
+$card-sub-title:1rem;
+$card-text:2.2rem;
+
+//table
+$product-table-height:480px;
+$product-img-width:50px;
+$product-img-height:50px;
+$table-data-padding:1rem;
+$table-row-space:1rem;
+
+
+//graph
+$sells-graph-height:480px;
+//===============content start ======================
+
+//=========responsive design ======================
+// $break-point:(
+//     "small":567px,
+//     "medium":768px,
+//     "large":992px,
+// );

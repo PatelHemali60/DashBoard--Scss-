@@ -1,0 +1,182 @@
+// Header area style
+.header {
+  height: $header-height;
+  background-color: $header-bg;
+  @extend %headerborder;
+  position: relative;
+  #userDropdown{
+    display: none;
+  }
+
+  & .header-content {
+    width: 100%;
+    position: relative;
+    @include Forsize(SM) {
+      width: 100%;
+    }
+  }
+
+  & .brandlogo {
+    width: $barnd-logo-width;
+
+    @include Forsize(SM) {
+      width: 50px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    span {
+      font-size: $barnd-logo-size;
+      @include Forsize(SM) {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  .searchbox {
+    position: relative;
+    margin-left: $searchbox-ml;
+    height: $searchbox-height;
+    width: $searchbox-width;
+    background-color: $searchbox-bg;
+
+    @include Forsize(L) {
+      width: 2.25rem;
+    }
+
+    @include Forsize(SM) {
+      width: 50px;
+    }
+
+    span {
+      @include position(absolute, auto, auto, auto, 1rem);
+      font-size: 1.2rem;
+      color: $header-icon-color;
+    }
+    input {
+      background-color: $searchbox-bg;
+      flex: 1;
+      font-size: 1.1rem;
+      outline: none;
+      border: none;
+      @include padding(0.6rem, 0.6rem, 0.6rem, 3rem);
+
+      @include Forsize(SM) {
+        display: none;
+      }
+    }
+
+    //search-button
+    button {
+      @include Forsize(SM) {
+        display: none;
+      }
+      height: 100%;
+    }
+  }
+
+  .notify {
+
+      transform: translateY(-180px);
+   
+    li:not(:first-child) {
+      margin-left: 30px;
+
+      @include Forsize(X-SM) {
+        margin-left: 10px;
+      }
+
+      
+
+      // @include Forsize(SM) {
+        
+      //   margin-left: 10px;
+      //   height: 2rem;
+      //   width: 2.25rem;
+      //   font-size: 1.25rem;
+      //   background-color: $white;
+      //   border: 1px solid gray;
+      // }
+    }
+    li:last-child {
+      margin-left: 20px;
+      margin-right: 40px;
+    }
+
+    a {
+      position: relative;
+      .notification-dot {
+        @include position($top: -12px, $left: 16px);
+        @include border-radius(all, 50%);
+        height: $notification-dot-width;
+        width: $notification-dot-width;
+        background-color: $accent;
+        display: inline-block;
+      }
+
+      &:hover {
+        .icon {
+          color: $primary;
+        }
+      }
+    }
+    .avatar {
+      vertical-align: middle;
+      width: $avatar-height;
+      height: $avatar-height;
+      @include border-radius(all, 50%);
+    }
+
+    .icon {
+      font-size: $header-icon-size;
+      color: $header-icon-color;
+    }
+  }
+  // #userDropdown:checked ~ nav {
+  //   //  display: none;
+  //   position: absolute;
+  //   // display: none;
+  //   top: 0;
+  //   right: 0;
+  //   flex-direction: column-reverse;
+  //   height: 200px;
+  //   width: 100px;
+  // }
+  #userDropdown:checked ~ nav .notify {
+    position: absolute;
+    flex-direction: column;
+    padding: 10px;
+    z-index: 100;
+  }
+}
+@include Forsize(SM){
+  .notify{
+    visibility: hidden;
+  }
+}
+@include Forsize(SM){
+
+  
+  
+  #userDropdown:checked ~ nav .notify {
+    visibility: visible;
+    position: absolute;
+    top:10px;
+    right:20px;
+    transform: translateY(0);
+ 
+    padding: 10px;
+    background-color: rgb(236, 237, 243);
+    z-index: 100;
+    .li-header{
+    
+      margin: 5px;
+    }
+  }
+}
+@include Forsize(SM) {
+  .notify{
+    transform: translateY(-170px);
+    transition: all 0.5s;
+  }
+}

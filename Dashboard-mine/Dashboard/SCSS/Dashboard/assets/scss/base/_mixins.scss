@@ -1,0 +1,69 @@
+// All the SCSS mixins goes here
+@mixin position(
+  $position: absolute,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto
+)
+//position
+ {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+//mixin for padding
+@mixin padding($top: 0px, $right: 0px, $bottom: 0px, $left: 0px) {
+  padding-top: $top;
+  padding-left: $left;
+  padding-bottom: $bottom;
+  padding-right: $right;
+}
+
+// border radius mixin
+@mixin border-radius($for: all, $val: 10px) {
+  @if $for==all {
+    border-radius: $val;
+  } @else if $for==topleft {
+    border-top-left-radius: $val="50px";
+  } @else if $for==topright {
+    border-top-right-radius: $val;
+  } @else if $for==bottomright {
+    border-bottom-right-radius: $val;
+  } @else if $for==bottomleft {
+    border-bottom-left-radius: $val;
+  }
+}
+
+
+
+//media quries
+
+@mixin Forsize($size) {
+  @if $size == X-SM {
+    @media (max-width: 320px) {
+      @content;
+    }
+  }
+  @if $size == SM {
+    @media (max-width: 567px) {
+      @content;
+    }
+  } @else if $size == M {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $size == L {
+    @media (max-width: 992px ) {
+      @content;
+    }
+  }
+  @else if $size == XL-L{
+    @media (max-width: 1024px) {
+      @content;
+    }
+  }
+}
